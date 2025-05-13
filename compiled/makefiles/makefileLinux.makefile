@@ -2,9 +2,9 @@ CC = g++
 CFLAGS = -Iinclude -Wall -Wextra -std=c++11
 SRC = src/main.cpp
 OBJ = $(SRC:.cpp=.o)
-TARGET = compiled/quizgame
+TARGET = compiled/quizgame.bin
 
-all: $(TARGET)
+all: $(TARGET) clean
 
 $(TARGET): $(OBJ)
 	$(CC) -o $@ $^

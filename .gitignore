@@ -1,6 +1,8 @@
-
-
-
+# ignore executable and object files
+*.exe
+*.o
+*.out
+*.bin
 
 # latex ignoring
 *.aux
