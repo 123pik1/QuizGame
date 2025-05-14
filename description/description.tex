@@ -9,8 +9,7 @@
 \geometry{margin=1in}
 
 \title{Quiz Game Description}
-\author{}
-\date{}
+\date{\today}
 
 \begin{document}
 
@@ -29,7 +28,7 @@ To compile the project, copy the content of one from the folders below into a \t
     \item \texttt{compiled/makefiles/makefileWindows.makefile} - for windows
     \item \texttt{compiled/makefiles/makefileLinux.makefile} - for Linux
 \end{itemize}
-In root of the project in terminal run: make. \newline
+In root of the project in terminal run: \textit{make}. \newline
 Or another way to compile the project is to move script\
 \texttt{compiled/makefiles/windowsCompile.bat}.
 
@@ -41,11 +40,29 @@ at a time.
 
 \section{Implementation}
 There will bew used MVC pattern.\
+Header files will be used to separate classes and will be placed in the\
+\texttt{include} folder with the same name as the class and in the folder with same name.\
+Different categories of questions will be in different files.
 \subsection{Model}
-There will be all logic of the game.
+There will be all logic of the game. This will include:
+\begin{itemize}
+    \item Question class - this will be a base class for all questions
+    \item Game class - this will be the main class of the game
+    \item Player class - this will be a class for player
+\end{itemize}
+The question class will be a base class for all questions. In "Ideas for Future Development"\
+there are some ideas connected with different types of questions - MVC will make it easier to\
+add after implementing the base game.
 \subsection{View}
 Currently the view can be implemented in console.\
-In future it can be in GUI.
+In future it can be in GUI. Splitting to different modules\
+makes it easy to rebuild view without changing other components.\
+This part will include classes:
+\begin{itemize}
+    \item Main menu class - class to display main menu
+    \item Answering question view class - to display question and give posiibility to answer
+    \item ViewManager - to manage what should be displayed
+\end{itemize}
 \subsection{Controller}
 The controller will be responsible for communication between\
 the model and the view. It will also handle the user input and\
@@ -76,28 +93,6 @@ update the model accordingly.\newline \newline
     \item Add a timer for each question. - maybe
     \item few categories of questions - knowledge or knowledge about another person
     \item Add multiplayer functionality. - category like in cozy app and category where like opponents
+    \item Adding own questions - I think needed in the future
 \end{itemize}
-% \section{Features}
-% \begin{itemize}
-%     \item Multiple-choice questions.
-%     \item Timed quizzes to challenge users.
-%     \item Score tracking and leaderboard.
-%     \item User-friendly interface.
-% \end{itemize}
-
-% \section{Game Flow}
-% \begin{enumerate}
-%     \item The user starts the game and selects a category.
-%     \item A series of questions is presented, one at a time.
-%     \item The user selects an answer within the given time limit.
-%     \item The game calculates the score and displays the results.
-% \end{enumerate}
-
-% \section{Future Enhancements}
-% \begin{itemize}
-%     \item Add support for multiplayer mode.
-%     \item Include more diverse question categories.
-%     \item Implement hints and lifelines for difficult questions.
-% \end{itemize}
-
 \end{document}
