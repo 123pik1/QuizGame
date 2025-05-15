@@ -20,17 +20,13 @@
 Ensure you have the following installed:
 \begin{itemize}
     \item g++
-    \item make
+    \item cmake
 \end{itemize}
 
-To compile the project, copy the content of one from the folders below into a \texttt{Makefile}
-\begin{itemize}
-    \item \texttt{compiled/makefiles/makefileWindows.makefile} - for windows
-    \item \texttt{compiled/makefiles/makefileLinux.makefile} - for Linux
-\end{itemize}
-In root of the project in terminal run: \textit{make}. \newline
-Or another way to compile the project is to move script\
-\texttt{compiled/makefiles/windowsCompile.bat}.
+To compile there is needed cmake installed. Create \texttt{build/} directory\
+in root, enter it and run \textbf{cmake ..} because CMakeLists.txt is in root.\
+After running it in \texttt{build/compiled/} directory is executable file to\
+run application.
 
 \section{Game Description}
 base idea:
@@ -80,7 +76,7 @@ update the model accordingly.\newline \newline
 \section{Technologies Used}
 \begin{itemize}
     \item C++ - with STL libraries
-    \item make - for building the project
+    \item cmake - for building the project
     \item g++ - for compiling the project
     \item git - for version control
 \end{itemize}
