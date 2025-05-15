@@ -16,6 +16,7 @@ include_directories(include/View)
 file(GLOB_RECURSE SOURCES
     "src/Controller/*.cpp"
     "src/Model/*.cpp"
+    "src/View/*.cpp"
 )
 
 # Executable
